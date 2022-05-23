@@ -25,7 +25,7 @@ const Location = () => {
     return (
         <div className='Location_random'>
             <div >
-                <img className='fondo_img' src="https://fondosmil.com/fondo/27334.jpg"/>
+                <img className='fondo_img' src="https://fondosmil.com/fondo/27334.jpg" alt="Fondo"/>
             </div>
             <div className='title_rick'>
                 <h1><b>Rick and Morty Wiki</b></h1>
