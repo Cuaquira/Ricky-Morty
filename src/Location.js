@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import ResidentInfo from './ResidentInfo';
 
 const Location = () => {
     
@@ -18,12 +19,8 @@ const Location = () => {
             .then(res => SetLocation(res.data))
         }
 
-
-
-
-
     return (
-        <div className='Location_random'>
+        <div key={Location.residents} className='Location_random'>
             <div >
                 <img className='fondo_img' src="https://fondosmil.com/fondo/27334.jpg" alt="Fondo"/>
             </div>
@@ -49,6 +46,15 @@ const Location = () => {
                 <p>Dimension: {Location.dimension}</p>
                 <p>Population: {Location.residents?.length}</p>
             </div>
+
+            <ul className='Namee'>
+                {Location.residents?.map(resident => (
+                    <li>
+                        <ResidentInfo key={resident} url={resident}/>
+                    </li>
+                ))}
+
+            </ul>
             
         </div>
     );

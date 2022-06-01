@@ -13,3 +13,14 @@
   height: 450px;
   width: 100%;
 }
+
+.Namee{
+  background-color: white;
+  color: black;
+}
+.card{
+  text-align: center;
+  display: inline-block;
+  
+  justify-content: space-between ;
+}
