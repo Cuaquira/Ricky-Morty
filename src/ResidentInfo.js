@@ -7,14 +7,14 @@ const ResidentInfo = ( {url} ) => {
     useEffect ( () => {
         axios.get(url)
         .then( res => SetList(res.data))
-    }, []);
+    }, [url]);
 
     console.log(list);
 
     return (
         <div className='card'>
             <h1>{list.name}</h1>
-            <img  src={list.image}/>
+            <img  src={list.image} alt="Img"/>
             <p>{list.status}</p>
             <p>{list.origin?.name}</p>
             <p>{list.episode?.length}</p>
