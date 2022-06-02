@@ -15,10 +15,9 @@ const ResidentInfo = ( {url} ) => {
         <div className='card'>
             <h1>{list.name}</h1>
             <img  src={list.image} alt="Img"/>
-            <p>{list.status}</p>
-            <p>{list.origin?.name}</p>
-            <p>{list.episode?.length}</p>
-
+            <p className='left_info'>Status: {list.status}</p>
+            <p className='left_info'>Birthplace: {list.origin?.name}</p>
+            <p className='left_info'>Episode: {list.episode?.length}</p>
         </div>
      
     )

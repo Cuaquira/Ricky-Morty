@@ -20,41 +20,43 @@ const Location = () => {
         }
 
     return (
-        <div key={Location.residents} className='Location_random'>
+        <div key={Location.residents}>
+            
             <div >
-                <img className='fondo_img' src="https://fondosmil.com/fondo/27334.jpg" alt="Fondo"/>
+                <img className='fondo_img' src="https://i.blogs.es/77a359/rick-y-morty-trailer-temporada-5-1619898958/1366_2000.jpeg" alt="Fondo"/>
             </div>
+            <section className='Location_random'>
             <div className='title_rick'>
                 <h1><b>Rick and Morty Wiki</b></h1>
             </div>
 
             <div>
-                <input 
+                <input className='input'
                 type="text" 
                 onChange={e => SetId(e.target.value)}
                 value={Id}
                 />
-                <button onClick={searchType}>Search</button>
+                <button className='buton' onClick={searchType}>Search</button>
             </div>
-
+            </section>
             <div className='title_name'>
             <h2>{Location.name}</h2>
             </div>
 
             <div className='info_location'>
-                <p>Type: {Location.type}</p>
-                <p>Dimension: {Location.dimension}</p>
-                <p>Population: {Location.residents?.length}</p>
+                <p className='info_style'>Type: {Location.type}</p>
+                <p className='info_style'>Dimension: {Location.dimension}</p>
+                <p className='info_style'>Population: {Location.residents?.length}</p>
             </div>
 
-            <ul className='Namee'>
+            <div className='Namee'>
                 {Location.residents?.map(resident => (
-                    <li>
+                    <div className='cardtotal'>
                         <ResidentInfo key={resident} url={resident}/>
-                    </li>
+                    </div>
                 ))}
 
-            </ul>
+            </div>
             
         </div>
     );
